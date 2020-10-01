@@ -1,0 +1,5 @@
+pratilipi/
+*.zip
+**/migrations/**
+*.pyc
+**/__pycache__/**

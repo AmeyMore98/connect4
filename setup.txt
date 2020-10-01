@@ -1,0 +1,5 @@
+1. Install Python (version = 3.7)
+2. Activate environment using command: source pratilipi/Scripts/activate
+3. Install all requirements using command: pip install -r requirements.txt
+4. Move into project directory: cd connect4
+5. Start server: python manage.py runserver
