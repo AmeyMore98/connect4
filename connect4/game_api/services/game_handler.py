@@ -12,14 +12,14 @@ class GameHandler:
 
     @staticmethod
     def start_game():
-        new_game_id = str(uuid.uuid4().hex)
+        # new_game_id = str()
         new_game = Game()
-        new_game.game_id = new_game_id
+        new_game.game_id = uuid.uuid4()
         new_game.game_over = False
         new_game.board = GameHandler.serialize_board(Connect4Game.create_board())
         new_game.save()
 
-        return Utils.build_reponse(Constants.STATUS_OK, Constants.GAME_READY, {'game_id': new_game_id})
+        return Utils.build_reponse(Constants.STATUS_OK, Constants.GAME_READY, {'game_id': new_game.game_id})
 
     @staticmethod
     def serialize_board(board):
