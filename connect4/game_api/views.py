@@ -10,24 +10,28 @@ from .serializers import serializers
 
 @api_view(['GET'])
 def start_game(request):
-
     if request.method == 'GET':
-
         response = GameHandler.start_game()
-
         return Response(response)
 
 
 @api_view(['POST'])
 def make_move(request):
-
     if request.method == 'POST':
-        data = request.data
-        game_id = data.get(Constants.GAME_ID, None)
-        if game_id:
-            response = GameHandler.make_move(game_id, request.data[Constants.DATA])
-        else:
-            response = Utils.build_reponse(Constants.STATUS_BAD_REQUEST, Constants.NO_GAME_ID)
+        request_data = request.data
+        
+        game_id = request_data.get(Constants.GAME_ID, None)
+        if not game_id:
+            return Response(Utils.build_reponse(Constants.STATUS_BAD_REQUEST, Constants.NO_GAME_ID))
+        
+        move_data = request_data.get(Constants.DATA, None)
+        if not move_data:
+            return Response(Utils.build_reponse(
+                status=Constants.STATUS_BAD_REQUEST,
+                message=Constants.NO_MOVE_DATA
+            )) 
+        
+        response = GameHandler.make_move(game_id, request.data[Constants.DATA])
         return Response(response)
 
 @api_view(['GET'])

@@ -20,6 +20,7 @@ class Constants:
     INVALID_GAME_ID = 'Invalid game id'
     NO_GAME_ID = 'No game id received'
     NO_PLAYER = 'No player specified'
+    NO_MOVE_DATA = 'No move data recieved'
 
     # Keys
     DATA = 'data'
