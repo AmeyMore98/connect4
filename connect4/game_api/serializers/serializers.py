@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from ..models import Game, Move
+from game_api.models import Game, Move
 
 
 class MoveSerializer(serializers.ModelSerializer):

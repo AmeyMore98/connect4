@@ -3,9 +3,9 @@ import numpy as np
 import pickle
 import base64
 
-from ..utils.constants import Constants
-from ..utils.utils import Utils
-from ..models import Game, Move
+from game_api.utils.constants import Constants
+from game_api.utils.utils import Utils
+from game_api.models import Game, Move
 
 
 class GameHandler:

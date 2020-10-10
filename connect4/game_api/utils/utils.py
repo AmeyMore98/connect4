@@ -1,4 +1,4 @@
-from .constants import Constants
+from game_api.utils.constants import Constants
 
 class Utils:
 
