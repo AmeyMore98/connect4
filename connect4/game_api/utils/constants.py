@@ -10,9 +10,6 @@ class Constants:
     STATUS_ERROR = 500
 
     # Messages
-    SUCCESS = 'Success'
-    FAILURE = 'Server Error'
-    INVALID_ACTION = 'Invalid Action'
     GAME_READY = 'Ready'
     VALID_MOVE = 'Valid Move'
     INVALID_MOVE = 'Invalid Move'
@@ -39,9 +36,6 @@ class Constants:
     BOARD = 'board'
 
     # Values
-    START_GAME = 'start'
-    PLAY_GAME = 'play'
-    ACTIONS = (START_GAME, PLAY_GAME)
     PLAYER_1 = 1
     PLAYER_2 = 2
     ROW_COUNT = 6
