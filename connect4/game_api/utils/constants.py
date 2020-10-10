@@ -21,6 +21,7 @@ class Constants:
 
     # Keys
     DATA = 'data'
+    MOVE_DATA = 'move_data'
     CREDENTIALS = 'credentials'
     STATUS = 'status'
     MESSAGE = 'message'

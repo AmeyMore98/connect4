@@ -24,14 +24,14 @@ def make_move(request):
         if not game_id:
             return Response(Utils.build_reponse(Constants.STATUS_BAD_REQUEST, Constants.NO_GAME_ID))
         
-        move_data = request_data.get(Constants.DATA, None)
+        move_data = request_data.get(Constants.MOVE_DATA, None)
         if not move_data:
             return Response(Utils.build_reponse(
                 status=Constants.STATUS_BAD_REQUEST,
                 message=Constants.NO_MOVE_DATA
             )) 
         
-        response = GameHandler.make_move(game_id, request.data[Constants.DATA])
+        response = GameHandler.make_move(game_id, move_data)
         return Response(response)
 
 @api_view(['GET'])
